@@ -3,11 +3,11 @@ os: linux
 files:
   - source: /
     destination: /home/ubuntu/blackedge/
-hooks:
-  BeforeInstall:
-    - location: pipeline/setup_dependencies.sh
-      timeout: 60
-      runas: root
+# hooks:
+#   BeforeInstall:
+#     - location: pipeline/setup_dependencies.sh
+#       timeout: 60
+#       runas: root
   # ApplicationStart:
   #   - location: pipeline/handle_run_app.sh
   #     timeout: 300
