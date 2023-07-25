@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ubuntu/blackedge/
+    destination: /home/ubuntu/
 hooks:
   BeforeInstall:
     - location: pipeline/setup_dependencies.sh
