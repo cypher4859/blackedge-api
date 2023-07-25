@@ -4,15 +4,11 @@ files:
   - source: /
     destination: /home/ubuntu/AQI/
 hooks:
-  # BeforeInstall:
-  #   - location: scripts/testGPIO.sh
-  #     timeout: 60
-  #     runas: root
-  # AfterInstall:
-  #   - location: scripts/testSensors.sh
-  #     timeout: 300
-  #     runas: root
+  BeforeInstall:
+    - location: ./pipeline/setup_dependencies.sh
+      timeout: 60
+      runas: root
   ApplicationStart:
-    - location: flask run
+    - location: ./pipeline/handle_run_app.sh
       timeout: 300
       runas: root
