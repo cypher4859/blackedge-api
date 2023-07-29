@@ -7,8 +7,5 @@ hooks:
   AfterInstall:
     - location: pipeline/setup_dependencies.sh
       timeout: 60
-      runas: root
   ApplicationStart:
     - location: pipeline/handle_run_app.sh
-      timeout: 300
-      runas: root
