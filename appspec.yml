@@ -5,7 +5,7 @@ files:
     destination: /home/ubuntu/
 hooks:
   AfterInstall:
-    - location: pipeline/setup_dependencies.sh
+    - location: bash pipeline/setup_dependencies.sh
       timeout: 60
-  ApplicationStart:
-    - location: pipeline/handle_run_app.sh
+  # ApplicationStart:
+  #   - location: pipeline/handle_run_app.sh
