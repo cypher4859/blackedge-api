@@ -8,5 +8,6 @@ hooks:
     - location: pipeline/setup_dependencies.sh
       runas: root
       timeout: 60
-  # ApplicationStart:
-  #   - location: pipeline/handle_run_app.sh
+  ApplicationStart:
+    - location: pipeline/handle_run_app.sh
+      runas: root
