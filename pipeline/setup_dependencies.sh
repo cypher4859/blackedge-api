@@ -1,5 +1,6 @@
 #!/bin/bash
 
 echo "Installing requirements"
-ls -l > log_work_dir
+ls -l
+pwd
 pip install -r ../requirements.txt
