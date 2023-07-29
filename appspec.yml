@@ -2,10 +2,11 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ubuntu/
+    destination: /home/ubuntu/blackedge-api/
 hooks:
   AfterInstall:
-    - location: bash pipeline/setup_dependencies.sh
+    - location: pipeline/setup_dependencies.sh
+      runas: root
       timeout: 60
   # ApplicationStart:
   #   - location: pipeline/handle_run_app.sh
