@@ -4,10 +4,13 @@ files:
   - source: /
     destination: /home/ubuntu/blackedge-api/
 hooks:
+  ApplicationStop:
+    - location: pipeline/pm2_stop_handling_app.sh
+      runas: root
   AfterInstall:
     - location: pipeline/setup_dependencies.sh
       runas: root
-      timeout: 300
+      timeout: 6000
   ApplicationStart:
-    - location: pipeline/handle_run_app.sh
+    - location: pipeline/pm2_start_handling_app.sh
       runas: root
