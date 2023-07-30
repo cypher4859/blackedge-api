@@ -1,0 +1,4 @@
+---
+# tasks file for install_dependencies
+- name: Update the environment
+  import_tasks: setup_ubuntu.yml

@@ -8,7 +8,7 @@ hooks:
     - location: pipeline/pm2_stop_handling_app.sh
       runas: root
   AfterInstall:
-    - location: pipeline/setup_dependencies.sh
+    - location: ansible/handle_ansible.sh
       runas: root
       timeout: 6000
   ApplicationStart:

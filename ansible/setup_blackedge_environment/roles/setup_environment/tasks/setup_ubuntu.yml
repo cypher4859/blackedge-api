@@ -1,0 +1,22 @@
+---
+- name: Update Cache "apt-get"
+  ansible.builtin.apt:
+    update_cache: yes
+
+- name: Install python3.10-venv and NPM
+  ansible.builtin.apt:
+    pkg:
+    - python3.10-venv
+    - npm
+
+- name: Install PM2
+  community.general.npm:
+    name: pm2
+    global: true
+    state: present
+
+- name: Create a PM2 log directory if it does not exist
+  ansible.builtin.file:
+    path: /var/log/pm2/blackedge-api
+    state: directory
+    mode: '0755'
