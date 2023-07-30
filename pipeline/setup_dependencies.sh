@@ -11,8 +11,6 @@ python3 -m venv .venv
 source .venv/bin/activate
 
 echo "Installing dependencies"
-apt install -y npm
-npm install pm2@latest -g
 pip install Flask
 pip install -r requirements.txt
 
